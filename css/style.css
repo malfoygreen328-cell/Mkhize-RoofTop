@@ -21,6 +21,7 @@ body{
 
 img{
     max-width:100%;
+    height:auto;
     display:block;
 }
 
@@ -34,13 +35,14 @@ ul{
 
 .container{
 
-    width:90%;
+    width: min(1200px, 90%);
 
     max-width:1300px;
 
-    margin:auto;
+    margin:0 auto;
 
 }
+
 
 /*==================================================
                     HEADER
@@ -52,26 +54,36 @@ ul{
     left:0;
     width:100%;
     z-index:1000;
-    padding:20px 0;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(12px);
     transition:.4s ease;
 }
 
 .header.scrolled{
-    background:rgba(0,0,0,.92);
-    backdrop-filter:blur(15px);
+    background:#0f0f0f;
     box-shadow:0 10px 35px rgba(0,0,0,.35);
-    padding:15px 0;
 }
 
 .header .container{
+    max-width:1300px;
+    width:90%;
+    margin:auto;
+
     display:flex;
     justify-content:space-between;
+    align-items:center;
+
+    height:90px;
+}
+
+.logo{
+    display:flex;
     align-items:center;
 }
 
 .logo img{
-    width:90px;
-    height:90px;
+    width:70px;
+    height:70px;
     border-radius:50%;
     object-fit:cover;
 }
@@ -126,61 +138,29 @@ ul{
 /*==================================================
                     NAVIGATION
 ==================================================*/
-
 .navbar{
     display:flex;
+    align-items:center;
 }
 
 .nav-links{
     display:flex;
-    gap:40px;
-    list-style:none;
-}
-
-.nav-links li{
+    align-items:center;
+    gap:35px;
     list-style:none;
 }
 
 .nav-links a{
-    text-decoration:none;
     color:#fff;
+    text-decoration:none;
     font-weight:600;
-    font-size:15px;
     transition:.3s;
-    position:relative;
-}
-
-.nav-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    bottom:-8px;
-
-    left:0;
-
-    width:0;
-
-    height:2px;
-
-    background:#c89b3c;
-
-    transition:.3s;
-
 }
 
 .nav-links a:hover{
-
-    color:#c89b3c;
-
+    color:#d4af37;
 }
 
-.nav-links a:hover::after{
-
-    width:100%;
-
-}
 
 /*==================================================
                 NAV BUTTONS
@@ -192,7 +172,7 @@ ul{
 
     align-items:center;
 
-    gap:25px;
+    gap:20px;
 
 }
 
@@ -377,25 +357,19 @@ ul{
 /*==================================================
             HAMBURGER ANIMATION
 ==================================================*/
-
-.menu-toggle.active span:nth-child(1){
-
-    transform:translateY(9px) rotate(45deg);
-
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+    gap:6px;
 }
 
-.menu-toggle.active span:nth-child(2){
-
-    opacity:0;
-
+.menu-toggle span{
+    width:28px;
+    height:3px;
+    background:#fff;
+    transition:.3s;
 }
-
-.menu-toggle.active span:nth-child(3){
-
-    transform:translateY(-9px) rotate(-45deg);
-
-}
-
 /*==================================================
                 ACTIVE LINK
 ==================================================*/
@@ -705,9 +679,7 @@ ul{
 
 }
 
-/*==================================================
-                    STATISTICS
-==================================================*/
+
 /*==================================================
                     STATISTICS
 ==================================================*/
