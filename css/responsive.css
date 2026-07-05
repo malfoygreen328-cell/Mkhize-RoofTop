@@ -10,7 +10,7 @@
 
     }
 
-    .hero-content h1{
+    .hero-text h1{
 
         font-size:64px;
 
@@ -31,46 +31,52 @@
     }
 
     .hero{
+    min-height:auto;
+    padding:140px 0 70px;
+}
 
-        min-height:auto;
+.hero-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:40px;
+}
 
-        padding:180px 0 100px;
+.hero-text{
+    width:100%;
+}
 
-    }
+.hero-text h1{
+    font-size:40px;
+    line-height:1.15;
+}
 
-    .hero-container{
+.hero-text h3{
+    font-size:24px;
+}
 
-        grid-template-columns:1fr;
+.hero-text p{
+    font-size:16px;
+    line-height:1.8;
+}
 
-        text-align:center;
+.hero-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    width:100%;
+}
 
-        gap:60px;
+.hero-buttons .btn{
+    width:100%;
+}
 
-    }
-
-    .hero-content{
-
-        max-width:750px;
-
-        margin:auto;
-
-    }
-
-    .hero-buttons{
-
-        justify-content:center;
-
-        flex-wrap:wrap;
-
-    }
-
-    .hero-card{
-
-        max-width:500px;
-
-        margin:auto;
-
-    }
+.hero-card{
+    width:100%;
+    max-width:100%;
+    padding:25px;
+}
 
     .about-content{
 
@@ -105,6 +111,24 @@
         grid-template-columns:repeat(2,1fr);
 
     }
+    .logo img{
+
+    width:60px;
+    height:60px;
+
+}
+
+.nav-links{
+
+    gap:22px;
+
+}
+
+.nav-links a{
+
+    font-size:15px;
+
+}
 
 }
 
@@ -180,13 +204,13 @@
 
     }
 
-    .hero-content h1{
+    .hero-text h1{
 
         font-size:48px;
 
     }
 
-    .hero-content p{
+    .hero-text p{
 
         font-size:16px;
 
@@ -274,25 +298,53 @@
 
     }
 
-    .hero-content h1{
+   .hero{
+    min-height:auto;
+    padding:140px 0 70px;
+}
 
-        font-size:38px;
+.hero-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:40px;
+}
 
-    }
+.hero-text{
+    width:100%;
+}
 
-    .hero-tag{
+.hero-text h1{
+    font-size:40px;
+    line-height:1.15;
+}
 
-        font-size:13px;
+.hero-text h3{
+    font-size:24px;
+}
 
-        letter-spacing:2px;
+.hero-text p{
+    font-size:16px;
+    line-height:1.8;
+}
 
-    }
+.hero-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    width:100%;
+}
 
-    .hero-buttons{
+.hero-buttons .btn{
+    width:100%;
+}
 
-        gap:15px;
-
-    }
+.hero-card{
+    width:100%;
+    max-width:100%;
+    padding:25px;
+}
 
     .btn{
 
@@ -302,10 +354,7 @@
 
     }
 
-    .hero-card{
-
-        padding:25px;
-
+    
     }
 
     .rating h2{
@@ -364,7 +413,7 @@
 
     }
 
-}
+
 
 /*==================================================
                 EXTRA SMALL DEVICES
@@ -372,7 +421,7 @@
 
 @media screen and (max-width:360px){
 
-    .hero-content h1{
+    .hero-text h1{
 
         font-size:32px;
 
